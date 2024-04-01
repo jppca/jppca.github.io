@@ -5,8 +5,8 @@ import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/dist/' },
-	{ label: 'Posts', href: '/dist/posts/' },
+	{ label: 'Home', href: '/' },
+	{ label: 'Posts', href: '/posts/' },
 	// { label: 'About', href: '/about/' },
 ];
 
@@ -21,7 +21,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 <nav>
 	<div class="menu-header">
-		<a href="/dist/" class="site-title">
+		<a href="/" class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			JP
 		</a>
@@ -46,7 +46,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/dist/' && Astro.url.pathname.startsWith(href)),
+										(href !== '/' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
@@ -84,7 +84,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/dist/' && Astro.url.pathname.startsWith(href)),
+										(href !== '/' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
