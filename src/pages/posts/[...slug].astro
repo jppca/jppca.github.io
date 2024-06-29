@@ -78,6 +78,7 @@ const { Content } = await entry.render();
 	.tags {
 		display: flex;
 		gap: 0.5rem;
+		flex-wrap: wrap;
 	}
 
 	.description {
@@ -86,8 +87,13 @@ const { Content } = await entry.render();
 	}
 
 	.content {
+	    display: contents;
 		max-width: 65ch;
 		margin-inline: auto;
+	}
+
+	.content h3, h4 {
+	    margin: 0;
 	}
 
 	.content > :global(* + *) {

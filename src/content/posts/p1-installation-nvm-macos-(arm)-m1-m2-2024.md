@@ -57,8 +57,8 @@ You will need to refresh the `.zshrc` file by running the following **command:**
  source .zshrc
 ```
 
-You can now confirm that you have NVM installed by running the following command. You should get a figure like ***0.39.2***.
-
+You can now confirm that you have NVM installed by running the following command. You should get a figure like ***0.39.2***.  
+**command:**
 ```bash
  nvm -v
 ```
