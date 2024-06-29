@@ -1,7 +1,7 @@
 ---
-title: Installation of Node Version Manager (NVM) for Mac (ARM) M1 and M2 2024.
+title: Installation of NVM for Mac (ARM) M1 and M2 2024.
 publishDate: 2024-06-29 11:35:00
-img: /assets/node.js_logo.png
+img: /assets/node.js_logo.webp
 img_alt: node.js runtime environment logo.
 description: |
   Detailed explanation of the steps to follow to install NMV on Mac (ARM) with M1 or M2.
