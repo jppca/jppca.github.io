@@ -4,7 +4,7 @@ publishDate: 2024-06-29 11:35:00
 img: /assets/node.js_logo.webp
 img_alt: node.js runtime environment logo.
 description: |
-  Detailed explanation of the steps to follow to install NMV on Mac (ARM) with M1 or M2.
+  Detailed explanation of the steps to follow to install NMV on Mac (ARM) with M1 or M2 🤓 👾 🌐
 tags:
   - Dev
   - Backend
@@ -13,10 +13,15 @@ tags:
   - Node
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+Installing Node Version Manager (NVM) is highly recommended because of its ability to manage multiple versions of Node.js effectively on your system. This is especially beneficial when working on multiple projects that require specific versions of Node.js. NVM allows you to easily switch between versions, ensuring compatibility and making it easy to test new updates without affecting other projects. It also keeps your development environment clean and organized by separating Node.js installations for each version, avoiding conflicts and optimizing dependency management.
+
+Currently it is not possible to install older versions of Node.js v14 for Macs with M1 or M2 as this version is considered old. However to support older projects it may be necessary to install an older version of Node.js on a Mac ARM machine so this tutorial will explain how to install both older and newer versions.
+
+# First step:
+# Install Rosette.
 
 ```bash
-grep node-vx.y.z.tar.gz SHASUMS256.txt | sha256sum -c -
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
 ```
 
 Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
