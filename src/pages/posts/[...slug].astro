@@ -92,6 +92,9 @@ const { Content } = await entry.render();
 		margin-inline: auto;
 	}
 
+	.content .astro-code {
+		padding: 10px 5px;
+	}
 	.content h3, h4 {
 	    margin: 0;
 	}
@@ -148,6 +151,10 @@ const { Content } = await entry.render();
 		.details {
 			flex-direction: row;
 			gap: 2.5rem;
+		}
+
+		.content {
+			display: block;
 		}
 
 		.content :global(blockquote) {

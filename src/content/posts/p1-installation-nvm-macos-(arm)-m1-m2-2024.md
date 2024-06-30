@@ -21,14 +21,14 @@ Currently it is not possible to install older versions of Node.js v14 for MacOS 
 #### Install Rosetta.
 **command:**
 ```bash
- /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
 ```
 
 ### Step 2:
 #### Change the arch.
 **command:**
 ```bash
- arch -x86_64 zsh
+arch -x86_64 zsh
 ```
 
 ### Step 3:
@@ -37,30 +37,30 @@ Currently it is not possible to install older versions of Node.js v14 for MacOS 
 The first thing to do is to verify the existence of the `.zshrc` file by executing the following **command:**
 
 ```bash
- ls -a
+ls -a
 ```
 If you do not have the `.zshrc` file, you must create it by executing the following **command:**
 
 ```bash
- touch .zshrc
+touch .zshrc
 ```
 After making sure you have the `.zshrc` now available in the list. Use cURL command from <a href="https://github.com/nvm-sh/nvm#install--update-script">this site</a> to install NVM. Copy and run this command in your terminal.  
 **command:**
 
 ```bash
- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
 
 You will need to refresh the `.zshrc` file by running the following **command:**
 
 ```bash
- source .zshrc
+source .zshrc
 ```
 
 You can now confirm that you have NVM installed by running the following command. You should get a figure like ***0.39.2***.  
 **command:**
 ```bash
- nvm -v
+nvm -v
 ```
 
 ### Step 4:
@@ -69,25 +69,25 @@ You can now confirm that you have NVM installed by running the following command
 Installing Node is now easy. Run this command in your terminal.  
 **command:**
 ```bash
- nvm install node
+nvm install node
 ```
 
 To install a specific version of Node, just add the version number at the end like this.  
 **command:**
 ```bash
- nvm install 18.12.1
+nvm install 18.12.1
 ```
 
 To use Node, you will first have to run the following command in your terminal.  
 **command:**
 ```bash
- nvm use node
+nvm use node
 ```
 
 or run a specific version of Node.  
 **command:**
 ```bash
- nvm use 18.12.1
+nvm use 18.12.1
 ```
 
 When you install Node, you also get the Node Package Manager (NPM), which means you are now fully equipped to use all the features that Node has to offer. Thanks for making it to the end of this article - you're fantastic!
