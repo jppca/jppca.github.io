@@ -19,7 +19,7 @@ mkcert is a simple tool for making locally-trusted development certificates. It 
 ### Step 1:
 #### Install mkcert.
 
-To start the installation you will use the brew package manager in MacOS.
+To start the installation you will use the brew package manager in MacOS.<br>
 **command:**
 
 ```bash
@@ -27,7 +27,7 @@ brew install mkcert
 brew install nss # if you use Firefox or Chrome.
 ```
 
-Install the local CA in the system trust store.
+Install the local CA in the system trust store.<br>
 **command:**
 
 ```bash
@@ -37,7 +37,7 @@ mkcert -install
 #### Generate the certificates.
 
 To generate the local SSL certificate we must place the mkcert command and the local domain defined for your environment.
-In this case we will use the example of `local.test` as the domain.
+In this case we will use the example of `local.test` as the domain.<br>
 **command:**
 
 ```bash
