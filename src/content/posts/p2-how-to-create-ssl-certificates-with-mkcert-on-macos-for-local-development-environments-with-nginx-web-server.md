@@ -1,10 +1,10 @@
 ---
-title: How to create SSL certificates with mkcert on macOS for local development environments with NGINX web server
+title: How to create SSL certificates with mkcert on MacOS for local development environments with NGINX web server
 publishDate: 2024-07-08 02:38:00
 img: /assets/https.webp
 img_alt: Hypertext transfer protocol secure image.
 description: |
-  Detailed explanation of the steps to follow to install Mkcert on macOS (ARM) with M1 or M2 🔐🌐.
+  Detailed explanation of the steps to follow to install Mkcert on MacOS (ARM) with M1 or M2 🔐🌐.
 tags:
   - Dev
   - Backend
