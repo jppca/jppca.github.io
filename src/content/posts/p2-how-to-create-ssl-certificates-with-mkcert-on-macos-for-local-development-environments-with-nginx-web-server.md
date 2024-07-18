@@ -6,10 +6,7 @@ img_alt: Hypertext transfer protocol secure image.
 description: |
   Detailed explanation of the steps to follow to install Mkcert on MacOS (ARM) with M1 or M2 🔐🌐.
 tags:
-  - Dev
-  - Backend
-  - Mkcert
-  - Homebrew
+
 ---
 
 Today SSL is practically a standard and most applications rely heavily on it. By running SSL on your local machine, the environment is more production-like, which makes testing and development much easier. It also allows you to run services that require it, such as GoogleMaps API location services, for example.

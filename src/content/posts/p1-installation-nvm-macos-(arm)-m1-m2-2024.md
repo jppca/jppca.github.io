@@ -6,11 +6,7 @@ img_alt: node.js runtime environment logo.
 description: |
   Detailed explanation of the steps to follow to install NMV on MacOS (ARM) with M1 or M2 🤓 👾 🌐
 tags:
-  - Dev
-  - Backend
-  - Frontend
-  - NVM
-  - Node.js
+
 ---
 
 Installing Node Version Manager (NVM) is highly recommended because of its ability to manage multiple versions of Node.js effectively on your system. This is especially beneficial when working on multiple projects that require specific versions of Node.js. NVM allows you to easily switch between versions, ensuring compatibility and making it easy to test new updates without affecting other projects. It also keeps your development environment clean and organized by separating Node.js installations for each version, avoiding conflicts and optimizing dependency management.
@@ -44,7 +40,7 @@ If you do not have the `.zshrc` file, you must create it by executing the follow
 ```bash
 touch .zshrc
 ```
-After making sure you have the `.zshrc` now available in the list. Use cURL command from <a href="https://github.com/nvm-sh/nvm#install--update-script">this site</a> to install NVM. Copy and run this command in your terminal.  
+After making sure you have the `.zshrc` now available in the list. Use cURL command from <a href="https://github.com/nvm-sh/nvm#install--update-script">this site</a> to install NVM. Copy and run this command in your terminal.
 **command:**
 
 ```bash
@@ -57,7 +53,7 @@ You will need to refresh the `.zshrc` file by running the following **command:**
 source .zshrc
 ```
 
-You can now confirm that you have NVM installed by running the following command. You should get a figure like ***0.39.2***.  
+You can now confirm that you have NVM installed by running the following command. You should get a figure like ***0.39.2***.
 **command:**
 ```bash
 nvm -v
@@ -66,25 +62,25 @@ nvm -v
 ### Step 4:
 #### Install Node.js with NVM.
 
-Installing Node is now easy. Run this command in your terminal.  
+Installing Node is now easy. Run this command in your terminal.
 **command:**
 ```bash
 nvm install node
 ```
 
-To install a specific version of Node, just add the version number at the end like this.  
+To install a specific version of Node, just add the version number at the end like this.
 **command:**
 ```bash
 nvm install 18.12.1
 ```
 
-To use Node, you will first have to run the following command in your terminal.  
+To use Node, you will first have to run the following command in your terminal.
 **command:**
 ```bash
 nvm use node
 ```
 
-or run a specific version of Node.  
+or run a specific version of Node.
 **command:**
 ```bash
 nvm use 18.12.1
