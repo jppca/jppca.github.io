@@ -30,7 +30,7 @@ const posts = (await getCollection('posts'))
 				{
 					posts.map((post) => (
 						<li>
-							<PortfolioPreview project={post} />
+							<PortfolioPreview post={post} />
 						</li>
 					))
 				}

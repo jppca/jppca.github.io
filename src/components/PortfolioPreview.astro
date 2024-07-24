@@ -2,10 +2,10 @@
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-	project: CollectionEntry<'work'>;
+	post: CollectionEntry<'work'>;
 }
 
-const { data, slug } = Astro.props.project;
+const { data, slug } = Astro.props.post;
 ---
 
 <a class="card" href={`/posts/${slug}`}>
