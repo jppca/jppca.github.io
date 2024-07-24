@@ -1,5 +1,6 @@
 ---
 title: How to create SSL certificates with mkcert on MacOS for local development environments with NGINX web server
+lang: en
 publishDate: 2024-07-08 02:38:00
 img: /assets/https.webp
 img_alt: Hypertext transfer protocol secure image.
