@@ -1,0 +1,14 @@
+---
+const { currentLang } = Astro.props;
+
+const changeLanguage = (lang) => {
+  const pathSegments = window.location.pathname.split('/').filter(Boolean);
+  pathSegments[0] = lang;
+  window.location.pathname = '/' + pathSegments.join('/');
+};
+---
+
+<div>
+  <button onClick={() => changeLanguage('en')} disabled={currentLang === 'en'}>English</button>
+  <button onClick={() => changeLanguage('es')} disabled={currentLang === 'es'}>Español</button>
+</div>

@@ -1,8 +1,15 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+// Define getStaticPaths for the dynamic route
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
 ---
 
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
