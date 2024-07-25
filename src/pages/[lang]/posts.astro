@@ -8,7 +8,9 @@ import PortfolioPreview from '../../components/PortfolioPreview.astro';
 import Hero from '../../components/Hero.astro';
 import Grid from '../../components/Grid.astro';
 
-const lang = Astro.params.lang; // This will be obtained from the URL or from a language selector.
+
+// Get lang used globally.
+const lang = Astro.params.lang;
 
 const posts = (await getCollection('posts'))
   .filter(post => post.data.lang === lang)

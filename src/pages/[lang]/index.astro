@@ -16,8 +16,8 @@ import PortfolioPreview from '../../components/PortfolioPreview.astro';
 import ContactCTA from '../../components/ContactCTA.astro';
 import Skills from '../../components/Skills.astro';
 
-const lang = Astro.params.lang; // This will be obtained from the URL or from a language selector.
-
+// Get lang used globally.
+const lang = Astro.params.lang;
 // Content Fetching: List four most recent posts.
 const posts = (await getCollection('posts'))
   .filter(post => post.data.lang === lang)
@@ -27,7 +27,7 @@ const posts = (await getCollection('posts'))
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 
-// Define getStaticPaths for the dynamic route
+// Define getStaticPaths for the dynamic route.
 export async function getStaticPaths() {
   return [
     { params: { lang: 'en' } },
@@ -54,7 +54,7 @@ export async function getStaticPaths() {
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="io"
 					width="480"
 					height="620"
 					src="/assets/portrait.png"
@@ -83,7 +83,7 @@ export async function getStaticPaths() {
 				</div>
 
 				<div class="cta">
-					<CallToAction href="posts/">
+					<CallToAction href=`/${lang}/posts/`>
 						View All
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>

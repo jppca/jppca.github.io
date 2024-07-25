@@ -3,11 +3,13 @@ import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
 
+const lang = Astro.params.lang;
+
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Posts', href: '/posts/' },
-	{ label: 'About', href: '/about/' },
+	{ label: 'Home', href: `/${lang}/` },
+	{ label: 'Posts', href: `/${lang}/posts/` },
+	// { label: 'About', href: `/${lang}/about/` },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -46,7 +48,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== `/${lang}/` && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
@@ -84,7 +86,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== `/${lang}/` && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
