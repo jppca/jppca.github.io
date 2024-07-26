@@ -7,6 +7,19 @@ const { currentLang } = Astro.props;
   <button class="es">Es</button>
 </language-switcher>
 
+<style>
+  button {
+    border-radius: 100%;
+    padding: 8px;
+    color: white;
+    background-color: #7611a65e;
+    border: none;
+  }
+  .active {
+    background-color: #7611a6;
+  }
+</style>
+
 <script>
   class LanguageSwitcher extends HTMLElement {
     constructor() {
@@ -15,10 +28,9 @@ const { currentLang } = Astro.props;
       const buttonEn = this.querySelector('.en');
       const buttonEs = this.querySelector('.es');
 
-      /** Set the language and update URL. */
+      // Set the language and update URL.
       const setLanguage = (lang) => {
-        // Update the URL path
-        let  pathSegments = window.location.pathname.split('/').filter(Boolean);
+        let pathSegments = window.location.pathname.split('/').filter(Boolean);
 
         // Replace the first occurrence of 'en' or 'es' in the URL.
         pathSegments = pathSegments.map(segment => {
@@ -31,12 +43,26 @@ const { currentLang } = Astro.props;
         window.location.pathname = '/' + pathSegments.join('/');
       };
 
-      // Buttons for translations.
+      // Load the language from localStorage and set active class.
+      const savedLang = localStorage.getItem('selectedLang') || 'en';
+      if (savedLang === 'en') {
+        buttonEn.classList.add('active');
+      } else {
+        buttonEs.classList.add('active');
+      }
+
+      // Event listeners for buttons.
       buttonEn.addEventListener('click', () => {
+        buttonEs.classList.remove('active');
+        buttonEn.classList.add('active');
+        localStorage.setItem('selectedLang', 'en');
         setLanguage('en');
       });
 
       buttonEs.addEventListener('click', () => {
+        buttonEn.classList.remove('active');
+        buttonEs.classList.add('active');
+        localStorage.setItem('selectedLang', 'es');
         setLanguage('es');
       });
     }
