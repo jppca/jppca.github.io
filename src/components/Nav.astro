@@ -2,6 +2,7 @@
 import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 
 const lang = Astro.params.lang;
 
@@ -98,6 +99,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			}
 		</ul>
 		<div class="menu-footer">
+			<LanguageSwitcher />
 			<div class="socials">
 				{
 					iconLinks.map(({ href, icon, label }) => (

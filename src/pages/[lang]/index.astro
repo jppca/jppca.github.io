@@ -10,7 +10,7 @@ import Grid from '../../components/Grid.astro';
 import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
-import PortfolioPreview from '../../components/PortfolioPreview.astro';
+import PostPreviewHome from '../../components/PostPreviewHome.astro';
 
 // Page section components
 import ContactCTA from '../../components/ContactCTA.astro';
@@ -75,7 +75,7 @@ export async function getStaticPaths() {
 						{
 							posts.map((post) => (
 								<li>
-									<PortfolioPreview post={post} />
+									<PostPreviewHome post={post} />
 								</li>
 							))
 						}

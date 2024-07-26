@@ -6,7 +6,6 @@
 import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 
 interface Props {
   title?: string | undefined;
@@ -49,7 +48,6 @@ const { lang } = Astro.params;
   </head>
   <body>
     <div class="stack backgrounds">
-      <LanguageSwitcher currentLang={lang} />
       <Nav />
       <slot />
       <Footer />

@@ -1,14 +1,46 @@
 ---
 const { currentLang } = Astro.props;
-
-const changeLanguage = (lang) => {
-  const pathSegments = window.location.pathname.split('/').filter(Boolean);
-  pathSegments[0] = lang;
-  window.location.pathname = '/' + pathSegments.join('/');
-};
 ---
 
-<div>
-  <button onClick={() => changeLanguage('en')} disabled={currentLang === 'en'}>English</button>
-  <button onClick={() => changeLanguage('es')} disabled={currentLang === 'es'}>Español</button>
-</div>
+<language-switcher>
+  <button class="en">En</button>
+  <button class="es">Es</button>
+</language-switcher>
+
+<script>
+  class LanguageSwitcher extends HTMLElement {
+    constructor() {
+      super();
+
+      const buttonEn = this.querySelector('.en');
+      const buttonEs = this.querySelector('.es');
+
+      /** Set the language and update URL. */
+      const setLanguage = (lang) => {
+        // Update the URL path
+        let  pathSegments = window.location.pathname.split('/').filter(Boolean);
+
+        // Replace the first occurrence of 'en' or 'es' in the URL.
+        pathSegments = pathSegments.map(segment => {
+          if (segment === 'en' || segment === 'es') {
+            return lang;
+          }
+          return segment;
+        });
+
+        window.location.pathname = '/' + pathSegments.join('/');
+      };
+
+      // Buttons for translations.
+      buttonEn.addEventListener('click', () => {
+        setLanguage('en');
+      });
+
+      buttonEs.addEventListener('click', () => {
+        setLanguage('es');
+      });
+    }
+  }
+
+  customElements.define('language-switcher', LanguageSwitcher);
+</script>
