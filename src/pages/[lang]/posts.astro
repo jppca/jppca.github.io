@@ -2,16 +2,18 @@
 import { getCollection } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
-
 import ContactCTA from '../../components/ContactCTA.astro';
 import Hero from '../../components/Hero.astro';
 import Grid from '../../components/Grid.astro';
 import PostPreviewPosts from '../../components/PostPreviewPosts.astro';
 
-
 // Get lang used globally.
 const lang = Astro.params.lang;
 
+// Import translations based on the current language
+const translations = await import(`../../locales/${lang}.json`);
+
+// Fetch posts
 const posts = (await getCollection('posts'))
   .filter(post => post.data.lang === lang)
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
@@ -26,14 +28,14 @@ export async function getStaticPaths() {
 ---
 
 <BaseLayout
-	title="My Posts | JP "
-	description="Learn about Jeanine White's most recent projects"
+	title={translations.baseLayout.title}
+	description={translations.baseLayout.description}
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="Posts in My Web Site"
-				tagline="See my most recent projects and publications on technology."
+				title={translations.postsPage.title}
+				tagline={translations.postsPage.tagline}
 				align="start"
 			/>
 			<Grid variant="offset">

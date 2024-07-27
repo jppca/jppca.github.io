@@ -1,9 +1,35 @@
 {
-  "title": "Hola, mi nombre es Juan Pablo Parra",
-  "tagline": "Soy un desarrollador creativo que actualmente reside en Tepic, Nayarit - México 🇲🇽 🤓.",
-  "description1": "Soy un Desarrollador Web con experiencia en la creación de soluciones web personalizadas. Mi enfoque principal es el uso de tecnologías como Drupal 9/10, Wordpress, PHP, Javascript, JQuery, SASS, CSS3, Gulp.js y Git para desarrollar sitios web dinámicos y atractivos.",
-  "description2": "En mi tiempo libre, disfruto aprendiendo y experimentando con nuevas tecnologías y herramientas para mantenerme al día en un campo en constante evolución. Además, disfruto compartiendo mis conocimientos con otros desarrolladores y la comunidad tecnológica.",
-  "projectsHeader": "Mi espacio en la web 🌎 === 🌐",
-  "projectsDescription": "Echa un vistazo a algunos de mis proyectos y publicaciones sobre tecnología.",
-  "viewAll": "Ver Todo"
+  "nav": {
+    "home": "Inicio",
+    "posts": "Publicaciones",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "menu": "Menú"
+  },
+  "indexPage": {
+    "title": "Hola, mi nombre es Juan Pablo Parra",
+    "tagline": "Soy un desarrollador creativo que actualmente reside en Tepic, Nayarit - México 🇲🇽 🤓.",
+    "description1": "Soy un desarrollador web con experiencia en la creación de soluciones web personalizadas. Mi enfoque principal es el uso de tecnologías como Drupal 9/10, Wordpress, PHP, Javascript, JQuery, SASS, CSS3, Gulp.js y Git para desarrollar sitios web dinámicos y atractivos.",
+    "description2": "En mi tiempo libre, disfruto aprendiendo y experimentando con nuevas tecnologías y herramientas para mantenerme al día en un campo en constante evolución. Además, disfruto compartiendo mis conocimientos con otros desarrolladores y la comunidad tecnológica.",
+    "projectsHeader": "Mi espacio en la web 🌎 === 🌐",
+    "projectsDescription": "Echa un vistazo a algunos de mis proyectos y publicaciones sobre tecnología.",
+    "viewAll": "Ver Todo"
+  },
+  "skills": {
+    "frontendDeveloper": "Desarrollador Frontend",
+    "frontendDescription": "Transformando diseños creativos en experiencias web interactivas y visualmente atractivas.",
+    "webSolutions": "Soluciones Web",
+    "webDescription": "Ingeniería de software personalizada para soluciones web únicas.",
+    "strategicWork": "Trabajo Estratégico",
+    "strategicDescription": "Llevar a cabo el trabajo con una estrategia para garantizar la calidad en cada solución desarrollada."
+  },
+  "postsPage": {
+    "title": "Publicaciones en mi sitio web",
+    "tagline": "Vea mis proyectos y publicaciones más recientes sobre tecnología."
+  },
+  "baseLayout": {
+    "title": "Mis Publicaciones | JP",
+    "description": "Conoce los proyectos más recientes de Jeanine White"
+  }
 }

@@ -1,24 +1,23 @@
 ---
 import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
-import type { iconPaths } from './IconPaths';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import { getTranslations } from '../config/translations.ts';
 
 const lang = Astro.params.lang;
+const translations = getTranslations(lang);
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: `/${lang}/` },
-	{ label: 'Posts', href: `/${lang}/posts/` },
-	// { label: 'About', href: `/${lang}/about/` },
+	{ label: translations.nav.home, href: `/${lang}/` },
+	{ label: translations.nav.posts, href: `/${lang}/posts/` },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	{ label: 'Linkedin', href: 'https://www.linkedin.com/in/juan-pablo-p-990161219/', icon: 'linkedin-logo' },
-	{ label: 'GitHub', href: 'https://github.com/jppca', icon: 'github-logo' },
-	{ label: 'Instagram', href: 'https://www.instagram.com/juanpa.parra.ca/', icon: 'instagram-logo' },
-
+	{ label: translations.linkedin, href: 'https://www.linkedin.com/in/juan-pablo-p-990161219/', icon: 'linkedin-logo' },
+	{ label: translations.github, href: 'https://github.com/jppca', icon: 'github-logo' },
+	{ label: translations.instagram, href: 'https://www.instagram.com/juanpa.parra.ca/', icon: 'instagram-logo' },
 ];
 ---
 

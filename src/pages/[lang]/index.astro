@@ -33,15 +33,15 @@ export async function getStaticPaths() {
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title={translations.title}
-					tagline={translations.tagline}
+					title={translations.indexPage.title}
+					tagline={translations.indexPage.tagline}
 					align="start"
 				>
 					<div class="roles">
 						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
 					</div>
-				  <p>{translations.description1}</p>
-				  <p>{translations.description2}</p>
+				  <p>{translations.indexPage.description1}</p>
+				  <p>{translations.indexPage.description2}</p>
 				</Hero>
 
 				<img
@@ -57,8 +57,8 @@ export async function getStaticPaths() {
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>{translations.projectsHeader}</h3>
-					<p>{translations.projectsDescription}</p>
+					<h3>{translations.indexPage.projectsHeader}</h3>
+					<p>{translations.indexPage.projectsDescription}</p>
 				</header>
 
 				<div class="gallery">
@@ -75,7 +75,7 @@ export async function getStaticPaths() {
 
 				<div class="cta">
 					<CallToAction href={`/${lang}/posts/`}>
-						{translations.viewAll}
+						{translations.indexPage.viewAll}
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
