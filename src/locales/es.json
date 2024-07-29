@@ -10,6 +10,7 @@
   "indexPage": {
     "title": "Hola, mi nombre es Juan Pablo Parra",
     "tagline": "Soy un desarrollador creativo que actualmente reside en Tepic, Nayarit - México 🇲🇽 🤓.",
+    "pill": "Desarrollador",
     "description1": "Soy un desarrollador web con experiencia en la creación de soluciones web personalizadas. Mi enfoque principal es el uso de tecnologías como Drupal 9/10, Wordpress, PHP, Javascript, JQuery, SASS, CSS3, Gulp.js y Git para desarrollar sitios web dinámicos y atractivos.",
     "description2": "En mi tiempo libre, disfruto aprendiendo y experimentando con nuevas tecnologías y herramientas para mantenerme al día en un campo en constante evolución. Además, disfruto compartiendo mis conocimientos con otros desarrolladores y la comunidad tecnológica.",
     "projectsHeader": "Mi espacio en la web 🌎 === 🌐",
@@ -31,5 +32,9 @@
   "baseLayout": {
     "title": "Mis Publicaciones | JP",
     "description": "Conoce los proyectos más recientes de Jeanine White"
+  },
+  "contactcta":{
+    "title": "¿Está interesado en colaborar?",
+    "cta":"Envíame un mensaje"
   }
 }

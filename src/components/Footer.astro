@@ -5,17 +5,17 @@ const currentYear = new Date().getFullYear();
 
 <footer>
 	<div class="group">
-		<p>
+		<!-- <p>
 			Designed & Developed with <a href="https://astro.build/">Astro Framework</a>
 			<Icon icon="rocket-launch" size="1.2em" />
-		</p>
-		<p>&copy; {currentYear}</p>
+		</p> -->
+		<p>JP-Dev &copy; {currentYear}</p>
 	</div>
-	<p class="socials">
+	<!-- <p class="socials">
 		<a href="./">Link</a>
 		<a href="./">Link</a>
 		<a href="./">Link</a>
-	</p>
+	</p> -->
 </footer>
 <style>
 	footer {
@@ -23,7 +23,7 @@ const currentYear = new Date().getFullYear();
 		flex-direction: column;
 		gap: 3rem;
 		margin-top: auto;
-		padding: 3rem 2rem 3rem;
+		padding: 20px;
 		text-align: center;
 		color: var(--gray-400);
 		font-size: var(--text-sm);
@@ -44,6 +44,7 @@ const currentYear = new Date().getFullYear();
 	.group {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		gap: 0.5rem;
 	}
 
@@ -55,16 +56,9 @@ const currentYear = new Date().getFullYear();
 	}
 
 	@media (min-width: 50em) {
-		footer {
-			flex-direction: row;
-			justify-content: space-between;
-			padding: 2.5rem 5rem;
-		}
 
 		.group {
 			flex-direction: row;
-			gap: 1rem;
-			flex-wrap: wrap;
 		}
 
 		.socials {

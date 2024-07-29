@@ -10,6 +10,7 @@
   "indexPage": {
     "title": "Hello, my name is Juan Pablo Parra",
     "tagline": "I'm a creative developer currently residing in Tepic, Nayarit - Mexico 🇲🇽 🤓.",
+    "pill": "Developer",
     "description1": "I'm a Web Developer with specialized experience in creating custom web solutions. My main focus is on using technologies such as Drupal 9/10, Wordpress, PHP, Javascript, JQuery, SASS, CSS3, Gulp.js, and Git to develop dynamic and attractive websites.",
     "description2": "In my free time, I enjoy learning and experimenting with new technologies and tools to stay up-to-date in a rapidly evolving field. Additionally, I enjoy sharing my knowledge with other developers and the tech community.",
     "projectsHeader": "My space in the web 🌎 === 🌐",
@@ -31,5 +32,9 @@
   "baseLayout": {
     "title": "My Posts | JP",
     "description": "Learn about Jeanine White's most recent projects"
+  },
+  "contactcta":{
+    "title": "Interested in working together?",
+    "cta":"Send Me a Message"
   }
 }

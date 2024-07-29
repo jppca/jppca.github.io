@@ -1,12 +1,16 @@
 ---
 import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
+import { getTranslations } from '../config/translations.ts';
+
+const lang = Astro.params.lang;
+const translations = getTranslations(lang);
 ---
 
 <aside>
-	<h2>Interested in working together?</h2>
+	<h2>{translations.contactcta.title}</h2>
 	<CallToAction href="mailto:jpparrac@gmail.com">
-		Send Me a Message
+		{translations.contactcta.cta}
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
 </aside>
