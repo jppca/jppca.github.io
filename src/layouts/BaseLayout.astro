@@ -49,7 +49,9 @@ const { lang } = Astro.params;
   <body>
     <div class="stack backgrounds">
       <Nav />
-      <slot />
+      <div class="content-wrapper">
+        <slot />
+      </div>
       <Footer />
     </div>
 
@@ -96,6 +98,9 @@ const { lang } = Astro.params;
         --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-800w.jpg");
       }
 
+      .content-wrapper {
+        padding-top: 100px;
+      }
       @media (min-width: 50em) {
         :root {
           --bg-scale: 1;
@@ -115,6 +120,10 @@ const { lang } = Astro.params;
           --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-1440w.jpg");
           --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-1440w.jpg");
         }
+
+        .content-wrapper {
+        padding-top: 200px;
+      }
       }
       @media (forced-colors: active) {
         /* Deactivate custom backgrounds for high contrast users. */
