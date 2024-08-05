@@ -5,7 +5,7 @@ publishDate: 2024-06-29 11:35:00
 img: /assets/node.js_logo.webp
 img_alt: node.js runtime environment logo.
 description: |
-  Detailed explanation of the steps to follow to install NMV on MacOS (ARM) with M1 or M2 🤓 👾 🌐
+  Learn how to install and manage multiple versions of Node.js on MacOS (ARM) M1 and M2 with NVM in 2024. This detailed guide shows you how to use NVM to keep your development environment clean, organized and compatible with old and new projects. Follow our steps to optimize your Node.js installation, improving efficiency and avoiding version conflicts on your system. Ideal for developers looking for a robust and flexible solution to work on different projects.
 tags:
 
 ---

@@ -48,7 +48,7 @@ const { Content } = await entry.render();
 			</header>
 			<main class="wrapper">
 				<div class="stack gap-10 content">
-					{entry.data.img && <img class="img-post" src={entry.data.img} alt={entry.data.img_alt || ''} />}
+					{entry.data.img && <img class="img-post" src={entry.data.img} alt={entry.data.img_alt || ''}  loading="lazy" />}
 					<div class="content">
 						<Content />
 					</div>
@@ -86,7 +86,6 @@ const { Content } = await entry.render();
 
 	.description {
 		font-size: var(--text-lg);
-		max-width: 54ch;
 	}
 
 	.content {
