@@ -10,9 +10,13 @@ tags:
 
 ---
 
-La instalación de Node Version Manager (NVM) es muy recomendable debido a su capacidad para gestionar múltiples versiones de Node.js de manera efectiva en su sistema. Esto es especialmente beneficioso cuando se trabaja en múltiples proyectos que requieren versiones específicas de Node.js. NVM te permite cambiar fácilmente entre versiones, asegurando la compatibilidad y facilitando la prueba de nuevas actualizaciones sin afectar a otros proyectos. También mantiene tu entorno de desarrollo limpio y organizado separando las instalaciones de Node.js para cada versión, evitando conflictos y optimizando la gestión de dependencias.
+## ¿Por Qué Usar NVM?
+Node Version Manager (NVM) es esencial para gestionar múltiples versiones de Node.js en tu Mac. Permite cambiar fácilmente entre versiones, asegurando la compatibilidad con distintos proyectos y facilitando pruebas sin afectar otros desarrollos. Mantiene tu entorno limpio y organizado, evitando conflictos y optimizando la gestión de dependencias.
 
-Actualmente no es posible instalar versiones antiguas de Node.js como la v14 para MacOS con M1 o M2 ya que esta versión se considera antigua. Sin embargo para dar soporte a proyectos antiguos puede ser necesario instalar una versión antigua de Node.js en una máquina MacOS ARM por lo que este tutorial explicará cómo instalar tanto versiones antiguas como nuevas.
+## Instalación en MacOS M1/M2
+Aunque las versiones antiguas de Node.js como la v14 no se pueden instalar directamente en MacOS M1/M2, aún es posible dar soporte a proyectos heredados siguiendo estos pasos.
+
+## Pasos para Instalar NVM
 
 ### Paso 1:
 #### Instalar Rosetta.
@@ -31,30 +35,33 @@ arch -x86_64 zsh
 ### Paso 3:
 #### Instalar NVM.
 
-Lo primero que hay que hacer es verificar la existencia del archivo `.zshrc` ejecutando lo siguiente **comando:**
+Lo primero que hay que hacer es verificar la existencia del archivo `.zshrc` ejecutando lo siguiente<br>
+**comando:**
 
 ```bash
 ls -a
 ```
-Si no dispone del archivo `.zshrc`, debe crearlo ejecutando lo siguiente **comando:**
+Si no dispone del archivo `.zshrc`, debe crearlo ejecutando lo siguiente<br>
+**comando:**
 
 ```bash
 touch .zshrc
 ```
-Después de asegurarse de que tiene el `.zshrc` ahora disponible en la lista. Utilice el comando cURL de <a href="https://github.com/nvm-sh/nvm#install--update-script">Este sitio</a> para instalar NVM. Copie y ejecute este comando en su terminal.
+Después de asegurarse de que tiene el `.zshrc` ahora disponible en la lista. Utilice el comando cURL de <a href="https://github.com/nvm-sh/nvm#install--update-script">Este sitio</a> para instalar NVM. Copie y ejecute este comando en su terminal.<br>
 **comando:**
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
 
-Deberá actualizar el `.zshrc` ejecutando lo siguiente **comando:**
+Deberá actualizar el `.zshrc` ejecutando lo siguiente<br>
+**comando:**
 
 ```bash
 source .zshrc
 ```
 
-Ahora puedes confirmar que tienes instalada la NVM ejecutando el siguiente comando. Deberías obtener una cifra como ***0.39.2***.
+Ahora puedes confirmar que tienes instalada la NVM ejecutando el siguiente comando. Deberías obtener una cifra como ***0.39.2***.<br>
 **comando:**
 ```bash
 nvm -v
@@ -63,27 +70,27 @@ nvm -v
 ### Paso 4:
 #### Instalar Node.js con NVM.
 
-Instalar Node ahora es fácil. Ejecute este comando en su terminal.
+Instalar Node ahora es fácil. Ejecute este comando en su terminal.<br>
 **comando:**
 ```bash
 nvm install node
 ```
 
-Para instalar una versión específica de Node, basta con añadir el número de versión al final de la siguiente manera.
+Para instalar una versión específica de Node, basta con añadir el número de versión al final de la siguiente manera.<br>
 **comando:**
 ```bash
 nvm install 18.12.1
 ```
 
-Para utilizar Node, primero tendrás que ejecutar el siguiente comando en tu terminal.
+Para utilizar Node, primero tendrás que ejecutar el siguiente comando en tu terminal.<br>
 **comando:**
 ```bash
 nvm use node
 ```
 
-o ejecutar una versión específica de Node.
+o ejecutar una versión específica de Node.<br>
 **comando:**
 ```bash
 nvm use 18.12.1
 ```
-Cuando instalas Node, también obtienes el Gestor de Paquetes de Node (NPM), lo que significa que ahora estás totalmente equipado para utilizar todas las características que Node tiene para ofrecer. Gracias por llegar hasta el final de este artículo - ¡eres fantástico!
+Con estos pasos, podrás gestionar múltiples versiones de Node.js en tu MacOS con NVM, garantizando compatibilidad y un entorno de desarrollo óptimo.
