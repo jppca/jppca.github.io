@@ -36,5 +36,10 @@
   "contactcta":{
     "title": "Interested in working together?",
     "cta":"Send Me a Message"
+  },
+  "footer":{
+    "termsUse":"Terms of Use",
+    "privacyPolicy":"Privacy Policy",
+    "siteMap":"Site Map"
   }
 }

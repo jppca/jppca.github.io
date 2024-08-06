@@ -1,6 +1,10 @@
 ---
 import Icon from './Icon.astro';
+import { getTranslations } from '../config/translations.ts';
+
 const currentYear = new Date().getFullYear();
+const lang = Astro.params.lang;
+const translations = getTranslations(lang);
 ---
 
 <footer>
@@ -12,9 +16,9 @@ const currentYear = new Date().getFullYear();
 		<p>JP-Dev &copy; {currentYear}</p>
 	</div>
 	<p class="socials">
-		<a href="#">Terms of Use</a>
-		<a href="#">Privacy Policy</a>
-		<a href="/sitemap-0.xml">Site Map</a>
+		<a href="#">{translations.footer.termsUse}</a>
+		<a href="#">{translations.footer.privacyPolicy}</a>
+		<a href="/sitemap-0.xml">{translations.footer.siteMap}</a>
 	</p>
 </footer>
 <style>

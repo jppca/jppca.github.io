@@ -36,5 +36,10 @@
   "contactcta":{
     "title": "¿Está interesado en colaborar?",
     "cta":"Envíame un mensaje"
+  },
+  "footer":{
+    "termsUse":"Terminos de Uso",
+    "privacyPolicy":"Políticas de Privacidad",
+    "siteMap":"Mapa de Sitio"
   }
 }
