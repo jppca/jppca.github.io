@@ -20,53 +20,61 @@ const { currentLang } = Astro.props;
   }
 </style>
 
+
 <script>
+  import { slugs } from '../../slugs';
   class LanguageSwitcher extends HTMLElement {
     constructor() {
       super();
 
-      const buttonEn = this.querySelector('.en');
-      const buttonEs = this.querySelector('.es');
+      const buttonEn = this.querySelector(".en");
+      const buttonEs = this.querySelector(".es");
 
       // Set the language and update URL.
       const setLanguage = (lang) => {
-        let pathSegments = window.location.pathname.split('/').filter(Boolean);
+        let pathSegments = window.location.pathname.split("/").filter(Boolean);
 
         // Replace the first occurrence of 'en' or 'es' in the URL.
-        pathSegments = pathSegments.map(segment => {
-          if (segment === 'en' || segment === 'es') {
+        pathSegments = pathSegments.map((segment) => {
+          if (segment === "en" || segment === "es") {
             return lang;
           }
           return segment;
+        });
+
+        // Change the slug if it is a post.
+        pathSegments = pathSegments.map((segment) => {
+          // Check if the segment matches any key in slugs for the given language.
+          return slugs[lang] && slugs[lang][segment] ? slugs[lang][segment] : segment;
         });
 
         window.location.pathname = '/' + pathSegments.join('/');
       };
 
       // Load the language from localStorage and set active class.
-      const savedLang = localStorage.getItem('selectedLang') || 'en';
-      if (savedLang === 'en') {
-        buttonEn.classList.add('active');
+      const savedLang = localStorage.getItem("selectedLang") || "en";
+      if (savedLang === "en") {
+        buttonEn.classList.add("active");
       } else {
-        buttonEs.classList.add('active');
+        buttonEs.classList.add("active");
       }
 
       // Event listeners for buttons.
-      buttonEn.addEventListener('click', () => {
-        buttonEs.classList.remove('active');
-        buttonEn.classList.add('active');
-        localStorage.setItem('selectedLang', 'en');
-        setLanguage('en');
+      buttonEn.addEventListener("click", () => {
+        buttonEs.classList.remove("active");
+        buttonEn.classList.add("active");
+        localStorage.setItem("selectedLang", "en");
+        setLanguage("en");
       });
 
-      buttonEs.addEventListener('click', () => {
-        buttonEn.classList.remove('active');
-        buttonEs.classList.add('active');
-        localStorage.setItem('selectedLang', 'es');
-        setLanguage('es');
+      buttonEs.addEventListener("click", () => {
+        buttonEn.classList.remove("active");
+        buttonEs.classList.add("active");
+        localStorage.setItem("selectedLang", "es");
+        setLanguage("es");
       });
     }
   }
 
-  customElements.define('language-switcher', LanguageSwitcher);
+  customElements.define("language-switcher", LanguageSwitcher);
 </script>
