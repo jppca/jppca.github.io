@@ -29,6 +29,9 @@
     "title": "Posts in My Web Site",
     "tagline": "See my most recent projects and publications on technology."
   },
+  "post": {
+    "link":"Posts"
+  },
   "baseLayout": {
     "title": "My Posts | JP",
     "description": "Learn about Jeanine White's most recent projects"

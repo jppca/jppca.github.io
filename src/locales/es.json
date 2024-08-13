@@ -29,6 +29,9 @@
     "title": "Publicaciones en mi sitio web",
     "tagline": "Vea mis proyectos y publicaciones más recientes sobre tecnología."
   },
+  "post": {
+    "link":"Publicaciones"
+  },
   "baseLayout": {
     "title": "Mis Publicaciones | JP",
     "description": "Conoce los proyectos más recientes de Jeanine White"

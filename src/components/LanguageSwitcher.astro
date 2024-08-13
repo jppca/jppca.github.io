@@ -8,17 +8,26 @@ const { currentLang } = Astro.props;
 </language-switcher>
 
 <style>
+
+  language-switcher{
+    display: flex;
+    align-items: center;
+
+  }
   button {
     border-radius: 100%;
     padding: 8px;
     color: var(--gray-200);
     background-color: #7611a65e;
     border: none;
+    margin: 5px;
+    height: fit-content;
   }
   .active {
     background-color: #7611a6;
     color: white;
     border: 5px solid #515d84;
+    margin: 0;
   }
 </style>
 
