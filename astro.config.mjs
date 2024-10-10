@@ -3,6 +3,6 @@ import sitemap from 'astro-sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://wwww.jpparradev.com',
+  site: 'https://jpparradev.com',
   integrations: [sitemap()],
 });
